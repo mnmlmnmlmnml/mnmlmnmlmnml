@@ -1,0 +1,32 @@
+.label {
+  width: 400px;
+}
+
+.input {
+  width: 90%;
+  height: 20px;
+  padding: 5px 5px;
+  background-color: #b5b7ba;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.text {
+  font-size: 18px;
+}
+
+.error {
+  display: flex;
+  color: #ff0000;
+  font-size: 12px;
+  line-height: 22px;
+  padding: 4px;
+  align-items: flex-start;
+}
+
+.input[data-error="true"] {
+  border-color: #ff0000;
+  border-style: solid;
+  margin-bottom: 0;
+}

@@ -1,0 +1,25 @@
+.header {
+  border-width: 0.14px;
+  border-color: #b5b7ba;
+  border-style: solid;
+  background-color: #dfdfdf;
+  text-align: center;
+  padding-top: 20px;
+  height: 48px;
+}
+
+.link {
+  color: #4d4d4d;
+  font-size: 20px;
+  font-weight: 100;
+  padding-right: 25px;
+  text-decoration: none;
+}
+
+@media screen and(max-width:768px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+  }
+}
