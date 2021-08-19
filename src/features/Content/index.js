@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./index.module.scss";
 import { Input, Button } from "../../ui";
-
+import { maybePluralize } from "../../utils";
 export function Content() {
   const [value, setValue] = useState();
   const [randomNumber, setRandomNumber] = useState(0);
@@ -45,22 +45,6 @@ export function Content() {
     setValue("");
     setTryCount((tryCount) => tryCount + 1);
   }
-
-  const maybePluralize = (
-    count,
-    noun,
-    suffix = "s",
-    suffixTwo = "",
-    suffixThree
-  ) => {
-    let suff =
-      count === 1
-        ? suffixTwo
-        : count === 5 || count === 0
-        ? suffixThree
-        : suffix;
-    return `  ${count} ${noun}${suff}`;
-  };
 
   return (
     <form onSubmit={handleSubmit} className={styles.form}>

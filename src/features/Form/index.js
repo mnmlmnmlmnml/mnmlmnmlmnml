@@ -1,6 +1,7 @@
 import React, { useState, useReducer } from "react";
 import styles from "./index.module.scss";
 import { Input, Button } from "../../ui";
+import { maybePluralize } from "../../utils";
 
 function reducer(state, action) {
   return { ...state, [action.name]: action.payload };
@@ -47,22 +48,6 @@ export function Form() {
     setScore(score);
     setError(errors);
   }
-
-  const maybePluralize = (
-    count,
-    noun,
-    suffix = "s",
-    suffixTwo = "",
-    suffixThree
-  ) => {
-    let suff =
-      count === 1
-        ? suffixTwo
-        : count === 5 || count === 0
-        ? suffixThree
-        : suffix;
-    return `  ${count} ${noun}${suff}`;
-  };
 
   return (
     <form onSubmit={handleSubmit} className={styles.form}>
