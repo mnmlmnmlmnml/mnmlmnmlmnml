@@ -1,18 +1,19 @@
 import React from "react";
 import styles from "./index.module.scss";
+import { Link } from "react-router-dom";
 
 export function Header() {
   return (
     <div className={styles.header}>
-      <a className={styles.link} href="main">
+      <Link className={styles.link} to="/">
         Главная
-      </a>
-      <a className={styles.link} href="puzzle">
+      </Link>
+      <Link className={styles.link} to="/puzzle">
         Загадки
-      </a>
-      <a className={styles.link} href="guess">
+      </Link>
+      <Link className={styles.link} to="/guess">
         Угадайка
-      </a>
+      </Link>
     </div>
   );
 }

@@ -7,15 +7,15 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className={styles.App}>
+    <div className={styles.App}>
+      <BrowserRouter>
         <Switch>
-          <Route path={"/main"} exact component={Main} />
-          <Route path={"/puzzle"} exact component={Puzzle} />
-          <Route path={"/guess"} exact component={Guess} />
+          <Route path="/" exact component={Main} />
+          <Route path="/puzzle" component={Puzzle} />
+          <Route path="/guess" component={Guess} />
         </Switch>
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
+    </div>
   );
 }
 
