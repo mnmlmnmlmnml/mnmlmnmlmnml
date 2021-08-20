@@ -4,8 +4,7 @@
   border-style: solid;
   background-color: #dfdfdf;
   text-align: center;
-  padding-top: 20px;
-  height: 48px;
+  padding: 20px 0;
 }
 
 .link {
@@ -20,6 +19,8 @@
   .header {
     display: flex;
     flex-direction: column;
-    height: 100px;
+  }
+  .link {
+    padding: 0;
   }
 }

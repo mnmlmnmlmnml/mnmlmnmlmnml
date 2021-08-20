@@ -8,7 +8,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 function App() {
   return (
     <div className={styles.App}>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route path="/" exact component={Main} />
           <Route path="/puzzle" component={Puzzle} />
